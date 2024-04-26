@@ -17,16 +17,20 @@
 
             <!-- Navigation bar -->
             <div class="grid-item">
-                <img src="Site logo">
+                <img id="logo" alt="Site logo" src="assets/img/icon.png">
             </div>
 
             <div class="grid-item">
                 <div class="nav-links">
                     <nav>
-                        <a class="navBar" href="index.html">Home</a>
-                        <a class="navBar" href="tools.html" >Tools</a>
-                        <a class="navBar" href="resources.html">Resources</a>
-                        <a class="navBar" href="application.html">Application</a>
+                        <a href="javascript:void(0);" class="icon" onclick="hamburger()">
+                            <img src="assets/img/hamburgerIcon.png" alt="hamburger menu icon" 
+                            class="hamburgerIcon"></img>
+                        </a>
+                        <a href="index.html">Home</a>
+                        <a class="active" href="#" >Tools</a>
+                        <a href="resources.html">Resources</a>
+                        <a href="application.html">Application</a>
                     </nav>
                 </div>
             </div>
