@@ -17,21 +17,26 @@
 
             <!-- Navigation bar -->
             <div class="grid-item">
-                <img src="Site logo">
+                <img id="logo" alt="Site logo" src="assets/img/icon.png">
             </div>
         
             <div class="grid-item">
-                <div class="nav-links">
+                <div class="nav-links" id="myNav">
                     <nav>
-                        <a class="navBar" href="">Home</a>
-                        <a class="navBar" href="#" >Tools</a>
-                        <a class="navBar" href="#">Resources</a>
-                        <a class="navBar" href="#">Application</a>
+                        <a href="javascript:void(0);" class="icon" onclick="hamburger()">
+                            <img src="assets/img/hamburgerIcon.png" alt="hamburger menu icon" 
+                            class="hamburgerIcon"></img>
+                        </a>
+                        <a class="active" href="">Home</a>
+                        <a href="#" >Tools</a>
+                        <a href="#">Resources</a>
+                        <a href="#">Application</a>
                     </nav>
                 </div>
             </div>
         
         </div>
 
+        <script src="assets/js/script.js"></script>
     </body>
     </html>
