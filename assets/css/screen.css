@@ -1,21 +1,8 @@
+/* general CSS */
 .krub-regular {
     font-family: "Krub", sans-serif;
     font-weight: 400;
     font-style: normal;
-}
-
-#introduction{
-    padding: 2%;
-    background-color: #ffe9ed;
-    margin: 1%;
-    border-radius: 2vw;
-}
-
-.tool-articles{
-    padding: 2%;
-    background-color: #ffe9ed;
-    margin: 1%;
-    border-radius: 2vw;
 }
 
 h1{
@@ -97,6 +84,29 @@ footer{
     background-color: #30323D;
 }
 
+/* homepage CSS */
+#introduction{
+    padding: 2%;
+    background-color: #ffe9ed;
+    margin: 1%;
+    border-radius: 2vw;
+}
+
+
+/* tool CSS */
+.tool-articles{
+    padding: 2%;
+    background-color: #ffe9ed;
+    margin: 1%;
+    border-radius: 2vw;
+}
+
+/* resources CSS */
+
+/* application CSS */
+
+
+/* mobile CSS */
 @media screen and (max-width: 600px) {
     .nav-links a:not(:first-child) {
         display: none;
