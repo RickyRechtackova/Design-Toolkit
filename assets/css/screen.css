@@ -4,6 +4,22 @@
     font-style: normal;
 }
 
+#introduction{
+    padding: 2%;
+    background-color: #ffe9ed;
+    margin: 1%;
+    border-radius: 2vw;
+}
+
+h1{
+    font-size: 3vw;
+    color: #30323D;
+}
+
+p{
+    font-size: 1.5vw;
+}
+
 body{
     background-color: #e6e6e6;
     font-family: "Krub", sans-serif;
@@ -58,6 +74,22 @@ body{
     max-width: 5.8vw;
     height: auto;
     color: white;
+}
+
+footer{
+    width: 100%;
+    height: 5vh;
+    text-align: center;
+    font-size: 1vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:#ffffff;
+    bottom: 0;
+    position: fixed;
+    box-sizing: border-box;
+    background-color: #30323D;
+
 }
 
 @media screen and (max-width: 600px) {
