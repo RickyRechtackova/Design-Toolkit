@@ -11,6 +11,13 @@
     border-radius: 2vw;
 }
 
+.tool-articles{
+    padding: 2%;
+    background-color: #ffe9ed;
+    margin: 1%;
+    border-radius: 2vw;
+}
+
 h1{
     font-size: 3vw;
     color: #30323D;
@@ -56,10 +63,8 @@ footer{
     align-items: center;
     color:#ffffff;
     bottom: 0;
-    position: fixed;
     box-sizing: border-box;
     background-color: #30323D;
-
 }
 
 @media screen and  (max-width: 800px) {
