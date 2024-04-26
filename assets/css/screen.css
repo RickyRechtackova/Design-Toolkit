@@ -59,6 +59,7 @@ body{
     padding-top: 1vw;
 }
 
+
 .nav-links .icon {
     display: none;
 }
@@ -98,6 +99,10 @@ footer{
     background-color: #ffe9ed;
     margin: 1%;
     border-radius: 2vw;
+}
+
+strong{
+    font-size: 1.2vw;
 }
 
 /* resources CSS */
