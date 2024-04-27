@@ -97,7 +97,11 @@ footer{
     align-items: center;
     grid-template-columns: auto auto auto;
     overflow: hidden;
-    margin-top: 4vw;
+    background-color: #ffe9ed;
+    padding-top: 4vw;
+    border-radius: 2vw;
+    /* margin: top right bottom left*/
+    margin: 3vw 1% 1% 1%;
 }
 
 .card {
