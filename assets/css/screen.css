@@ -90,6 +90,19 @@ footer{
     background-color: #30323D;
 }
 
+button{
+    background-color: #B84A62;
+    border: 2px solid #97374c;
+    color: white;
+    border-radius: 2vw;
+    font-family: "Krub", sans-serif;
+}
+
+button:hover{
+    background-color: #96374b;
+    border: 2px solid rgb(121, 40, 57);
+}
+
 /* homepage CSS */
 #introduction{
     padding: 2%;
@@ -98,14 +111,22 @@ footer{
     border-radius: 2vw;
 }
 
+#tools{
+    border-radius: 2vw;
+    background-color: #ffe9ed;
+    margin: 1%;
+}
+
+.intro-content{
+    padding-top: 2%;
+    margin-left: 3%;
+}
+
 .grid-container{
     display: grid;
     align-items: center;
     grid-template-columns: auto auto auto;
     overflow: hidden;
-    background-color: #ffe9ed;
-    padding-top: 4vw;
-    border-radius: 2vw;
     /* margin: top right bottom left*/
     margin: 3vw 1% 1% 1%;
 }
@@ -118,6 +139,19 @@ footer{
     margin-bottom: 8vw;
     margin-left: auto;
     margin-right: auto;
+}
+
+.card-buttons{
+    width: 15vw;
+    height: 3vw;
+    font-size: 1.5vw;
+    margin-left: 5vw;
+}
+
+.card-content{
+    /* margin: top right bottom left*/
+    margin: 3vw 2vw 1vw 2vw;
+    text-align: center;
 }
 
 .card-inner {
@@ -161,14 +195,13 @@ footer{
 .image-placeholder {
     width: 100%;
     height: 100%;
-    background-color: #ccc;
+    /* background-color: #424453; */
     margin-bottom: 20px;
 }
 
 .card-title {
     margin: 0;
 }
-
 
 /* tool CSS */
 .tool-articles{
@@ -200,9 +233,18 @@ strong{
     .card{
         width: 35vw;
         margin-bottom: 13vw;
+        height: 31vw;
     }
     #card3{
         margin-left: 65%;
+    }
+
+    .card-buttons{
+        width: 20vw;
+        height: 4vw;
+        font-size: 2vw;
+        margin-left: 7.5vw;
+        margin-top: 1vw;
     }
 
     .nav-links{
@@ -265,11 +307,26 @@ strong{
     }
 
     .card{
-        margin-left: auto;
-        margin-right: auto;
         width: 60vw;
-        height: 40vw;
+        height: 50vw;
         margin-bottom: 13vw;
+    }
+
+    .card-title{
+        font-size: 4vw;
+    }
+
+    .card-buttons{
+        width: 35vw;
+        height: 7vw;
+        font-size: 3vw;
+        margin-left: 12.5vw;
+        margin-top: 2vw;
+        border-radius: 4vw;
+    }
+
+    .card-content{
+        margin-top: 10vw;
     }
 
     p{
