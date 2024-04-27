@@ -24,7 +24,7 @@ body{
 
 .nav-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 0.5fr 2fr 2fr;
     background-color: #30323D;
 }
 
@@ -59,6 +59,12 @@ body{
     padding-top: 1vw;
 }
 
+#logoText{
+    color: white;
+    font-size: 2.5vw;
+    margin-left: 0;
+    font-weight: bold;
+}
 
 .nav-links .icon {
     display: none;
@@ -147,7 +153,7 @@ footer{
 }
 
 .card-back {
-    background-color: #333;
+    background-color: #30323D;
     color: #fff;
     transform: rotateY(180deg);
 }
@@ -183,6 +189,10 @@ strong{
 
 /* tablet CSS */
 @media screen and (min-width: 600px) and (max-width: 1000px){
+    .nav-container{
+        grid-template-columns: 0.4fr 1.5fr 2fr;
+    }
+    
     .grid-container{
         margin-top: 4vw;
         grid-template-columns: auto auto;
@@ -216,6 +226,10 @@ strong{
 
 /* mobile CSS */
 @media screen and (max-width: 600px) {
+    .nav-container{
+        grid-template-columns: 0.5fr 0.5fr 3fr;
+    }
+    
     .nav-links a:not(:first-child) {
         display: none;
     }
