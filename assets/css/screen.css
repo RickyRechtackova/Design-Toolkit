@@ -111,7 +111,7 @@ button:hover{
     border-radius: 2vw;
 }
 
-#tools{
+.section{
     border-radius: 2vw;
     background-color: #ffe9ed;
     margin: 1%;
@@ -199,8 +199,15 @@ button:hover{
     margin-bottom: 20px;
 }
 
+.long-card-title{
+    margin: 0;
+    text-align: center;
+    font-size: 2.4vw;
+}
+
 .card-title {
     margin: 0;
+    text-align: center;
 }
 
 /* tool CSS */
@@ -237,6 +244,10 @@ strong{
     }
     #card3{
         margin-left: 65%;
+    }
+
+    .long-card-title{
+        font-size: 3vw;
     }
 
     .card-buttons{
@@ -313,6 +324,10 @@ strong{
     }
 
     .card-title{
+        font-size: 4vw;
+    }
+
+    .long-card-title{
         font-size: 4vw;
     }
 
