@@ -96,6 +96,7 @@ button{
     color: white;
     border-radius: 2vw;
     font-family: "Krub", sans-serif;
+    cursor: pointer;
 }
 
 button:hover{
@@ -103,13 +104,14 @@ button:hover{
     border: 2px solid rgb(121, 40, 57);
 }
 
-/* homepage CSS */
-#introduction{
+.introduction{
     padding: 2%;
     background-color: #ffe9ed;
     margin: 1%;
     border-radius: 2vw;
 }
+
+/* homepage CSS */
 
 .section{
     border-radius: 2vw;
@@ -223,6 +225,66 @@ strong{
 }
 
 /* resources CSS */
+.aside{
+    text-align: center;
+    background-color: #30323dbd;
+    font-size: 1.7vw;
+    color: white;
+    width: 20%;
+    margin-left: 3%;
+    margin-right: 2%;
+    float: right;
+    font-style: italic;
+    padding: 15px;
+    border-radius: 2vw;
+}
+
+.resource-articles{
+    padding: 2%;
+    background-color: #ffe9ed;
+    margin: 1%;
+    border-radius: 2vw;
+}
+
+#asideButton{
+    width: 12vw;
+    height: 3vw;
+    font-size: 1.5vw;
+    margin-top: 1.4vw;
+    font-weight: bold;
+}
+
+.resourceImg{
+    width: 100%;
+}
+
+.center{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.validator-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+    grid-gap: 2vw;
+    margin-top: 2vw;
+}
+
+.validator-item{
+    background-color: #ffffff;
+    border-radius: 2vw;
+    text-align: left;
+    padding-left: 3vw;
+    padding-right: 3vw;
+    padding-bottom: 2vw;
+}
+
+.validatorImg{
+    width: 90%;
+    height: auto;
+}
 
 /* application CSS */
 
@@ -355,4 +417,23 @@ strong{
     footer{
         font-size: 2vw;
     }
+
+
+    /* Resource page */
+    .aside{
+        font-size: 3vw;
+        width: 30%;
+    }
+    
+    #asideButton{
+        width: 27vw;
+        height: 5vw;
+        font-size: 2.5vw;
+    }
+
+    .validator-container {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
 }
