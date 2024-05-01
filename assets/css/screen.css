@@ -10,6 +10,11 @@ h1{
     color: #30323D;
 }
 
+h2{
+    font-size: 2vw;
+    color: #ffffff;
+}
+
 p{
     font-size: 1.5vw;
 }
@@ -32,7 +37,6 @@ body{
     width: 100%; 
     height: auto;
     overflow: hidden;
-
     a {
         font-size: 1.7vw;
         text-decoration: none;
@@ -210,6 +214,7 @@ button:hover{
 .card-title {
     margin: 0;
     text-align: center;
+    color: #30323D;
 }
 
 /* tool CSS */
@@ -223,6 +228,104 @@ button:hover{
 strong{
     font-size: 1.2vw;
 }
+
+.title-grid{
+    width: 100%;
+    background-color: #B84A62;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border-radius: 2vw;
+
+}
+
+.level1, .level2, .level3{
+    text-align: center;
+}
+
+.level1:hover{
+    background-color: #30323D;
+    border-radius: 2vw 0vw 0vw 2vw;
+}
+
+.level2:hover{
+    background-color: #30323D;
+}
+
+.level3:hover{
+    background-color: #30323D;
+    border-radius: 0vw 2vw 2vw 0vw;
+}
+
+.active-level{
+    border-radius: 2vw 2vw 0vw 0vw;
+    border: solid 3px #B84A62;
+    background-color: #ffe9ed;
+    border-bottom: transparent;
+    text-align: center;
+    color: #30323D;
+}
+
+.active-level h2{
+    color: #30323D;
+}
+
+.level-grid-beginner{
+    display: none;
+    /* display: grid; */
+    width: 100%;
+    height: 30vw;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 0vw 2vw 2vw 2vw;
+    border: solid 3px #B84A62;
+    border-top: transparent;
+}
+
+.level-grid-intermediate{
+    display: none;
+    /* display: grid; */
+    width: 100%;
+    height: 30vw;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 2vw;
+    border: solid 3px #B84A62;
+    border-top: transparent;
+}
+
+.level-grid-master{
+    /* display: none; */
+    display: grid;
+    width: 100%;
+    height: 30vw;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 2vw 0vw 2vw 2vw;
+    border: solid 3px #B84A62;
+    border-top: transparent;
+}
+
+.level-grid-item{
+    padding-left: 5%;
+    padding-top: 2%;
+    box-sizing: border-box;
+}
+
+.video-card {
+    width: 36.5vw;
+    height: 25vw;
+    border-radius: 10px;
+}
+
+.video-card-inner{
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.8s, left 0.8s;
+}
+
+.card-video{
+    width: 36.5vw;
+    height: 42vh;
+}
+
 
 /* resources CSS */
 .aside{
@@ -434,6 +537,31 @@ strong{
     .validator-container {
         display: grid;
         grid-template-columns: 1fr;
+    }
+
+    /* tools CSS */
+
+    .level-grid-master{
+        /* display: none; */
+        display: grid;
+        width: 100%;
+        height: 55vh;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        border-radius: 2vw 0vw 2vw 2vw;
+        border: solid 3px #B84A62;
+        border-top: transparent;
+    }
+
+    .video-card {
+        width: 70vw;
+        height: 50vw;
+        border-radius: 10px;
+    }
+    
+    .card-video{
+        width: 70vw;
+        height: 22vh;
     }
 
 }
