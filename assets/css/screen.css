@@ -326,7 +326,6 @@ strong{
     height: 100%;
 }
 
-
 /* resources CSS */
 .aside{
     text-align: center;
@@ -452,6 +451,7 @@ strong{
     .video-card {
         margin-top: 18%;
     }
+
 }
 
 /* mobile CSS */
@@ -556,9 +556,7 @@ strong{
     }
 
     /* tools CSS */
-
-    #master-figma{
-        /* display: none; */
+    .beginner-section, .intermediate-section, .master-section{
         width: 100%;
         height: auto;
         grid-template-columns: 1fr;
@@ -567,9 +565,8 @@ strong{
     }
 
     .video-card {
-        width: 70vw;
-        height: 35vw;
+        width: 75vw;
+        height: 50vw;
         margin-left: 2%;
     }
-
 }
