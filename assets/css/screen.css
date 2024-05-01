@@ -235,7 +235,6 @@ strong{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     border-radius: 2vw;
-
 }
 
 .level1, .level2, .level3{
@@ -262,14 +261,13 @@ strong{
     background-color: #ffe9ed;
     border-bottom: transparent;
     text-align: center;
-    color: #30323D;
 }
 
 .active-level h2{
     color: #30323D;
 }
 
-.level-grid-beginner{
+#beginner-figma{
     display: none;
     /* display: grid; */
     width: 100%;
@@ -280,7 +278,7 @@ strong{
     border-top: transparent;
 }
 
-.level-grid-intermediate{
+#intermediate-figma{
     display: none;
     /* display: grid; */
     width: 100%;
@@ -291,7 +289,7 @@ strong{
     border-top: transparent;
 }
 
-.level-grid-master{
+#master-figma{
     /* display: none; */
     display: grid;
     width: 100%;
