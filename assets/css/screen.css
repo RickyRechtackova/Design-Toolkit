@@ -244,67 +244,60 @@ strong{
     width: 100%;
     background-color: #B84A62;
     display: grid;
+    border: solid 3px #B84A62;
+    border-bottom: transparent;
     grid-template-columns: 1fr 1fr 1fr;
-    border-radius: 2vw;
+    border-radius: 2vw 2vw 0vw 0vw;
 }
 
-.level1, .level2, .level3{
+.level{
     text-align: center;
 }
 
-.level1:hover{
+.level:hover{
     background-color: #30323D;
-    border-radius: 2vw 0vw 0vw 2vw;
-}
-
-.level2:hover{
-    background-color: #30323D;
-}
-
-.level3:hover{
-    background-color: #30323D;
-    border-radius: 0vw 2vw 2vw 0vw;
+    border-radius: 2vw 2vw 0vw 0vw;
+    width: 100%;
 }
 
 .active-level{
     border-radius: 2vw 2vw 0vw 0vw;
-    border: solid 3px #B84A62;
+    /* border: solid 3px #B84A62; */
     background-color: #ffe9ed;
     border-bottom: transparent;
     text-align: center;
-    width: 100%;
 }
 
 .active-level h2{
     color: #30323D;
 }
 
-#beginner-figma{
+.beginner-section{
     display: grid;
     width: 100%;
     height: 30vw;
     grid-template-columns: 1fr 1fr;
-    border-radius: 0vw 2vw 2vw 2vw;
+    border-radius: 0vw 0vw 2vw 2vw;
     border: solid 3px #B84A62;
     border-top: transparent;
 }
 
-#intermediate-figma{
+.intermediate-section{
     display: none;
     width: 100%;
     height: 30vw;
     grid-template-columns: 1fr 1fr;
-    border-radius: 2vw;
+    border-radius: 0vw 0vw 2vw 2vw;
     border: solid 3px #B84A62;
     border-top: transparent;
 }
 
-#master-figma{
+.master-section{
     display: none;
     width: 100%;
     height: 30vw;
     grid-template-columns: 1fr 1fr;
-    border-radius: 2vw 0vw 2vw 2vw;
+    border-radius: 0vw 0vw 2vw 2vw;
     border: solid 3px #B84A62;
     border-top: transparent;
 }
