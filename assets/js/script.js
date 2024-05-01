@@ -37,6 +37,14 @@ let beginnerSectionSketch = document.getElementsByClassName("beginner-section")[
 let intermediateSectionSketch = document.getElementsByClassName("intermediate-section")[1];
 let masterSectionSketch = document.getElementsByClassName("master-section")[1];
 
+let beginnerButtonAdobe = document.getElementById("beginner-adobe");
+let intermediateButtonAdobe = document.getElementById("intermediate-adobe");
+let masterButtonAdobe = document.getElementById("master-adobe");
+
+let beginnerSectionAdobe = document.getElementsByClassName("beginner-section")[2];
+let intermediateSectionAdobe = document.getElementsByClassName("intermediate-section")[2];
+let masterSectionAdobe = document.getElementsByClassName("master-section")[2];
+
 beginnerButtonFigma.addEventListener("click", displayBeginnerFigma);
 intermediateButtonFigma.addEventListener("click", displayIntermediateFigma);
 masterButtonFigma.addEventListener("click", displayMasterFigma);
@@ -45,8 +53,11 @@ beginnerButtonSketch.addEventListener("click", displayBeginnerSketch);
 intermediateButtonSketch.addEventListener("click", displayIntermediateSketch);
 masterButtonSketch.addEventListener("click", displayMasterSketch);
 
+beginnerButtonAdobe.addEventListener("click", displayBeginnerAdobe);
+intermediateButtonAdobe.addEventListener("click", displayIntermediateAdobe);
+masterButtonAdobe.addEventListener("click", displayMasterAdobe);
+
 function displayBeginnerFigma(){
-    // Figma
     beginnerButtonFigma.classList.remove("level");
     beginnerButtonFigma.classList.add("active-level");
 
@@ -75,6 +86,21 @@ function displayBeginnerSketch(){
     beginnerSectionSketch.style.display = "grid";
     intermediateSectionSketch.style.display = "none";
     masterSectionSketch.style.display = "none";
+}
+
+function displayBeginnerAdobe(){
+    beginnerButtonAdobe.classList.remove("level");
+    beginnerButtonAdobe.classList.add("active-level");
+
+    intermediateButtonAdobe.classList.add("level");
+    intermediateButtonAdobe.classList.remove("active-level");
+
+    masterButtonAdobe.classList.add("level");
+    masterButtonAdobe.classList.remove("active-level");
+
+    beginnerSectionAdobe.style.display = "grid";
+    intermediateSectionAdobe.style.display = "none";
+    masterSectionAdobe.style.display = "none";
 }
 
 function displayIntermediateFigma(){
@@ -107,6 +133,21 @@ function displayIntermediateSketch(){
     masterSectionSketch.style.display = "none";
 }
 
+function displayIntermediateAdobe(){
+    beginnerButtonAdobe.classList.add("level");
+    beginnerButtonAdobe.classList.remove("active-level");
+
+    intermediateButtonAdobe.classList.remove("level");
+    intermediateButtonAdobe.classList.add("active-level");
+
+    masterButtonAdobe.classList.add("level");
+    masterButtonAdobe.classList.remove("active-level");
+
+    beginnerSectionAdobe.style.display = "none";
+    intermediateSectionAdobe.style.display = "grid";
+    masterSectionAdobe.style.display = "none";
+}
+
 function displayMasterFigma(){
     beginnerButtonFigma.classList.add("level");
     beginnerButtonFigma.classList.remove("active-level");
@@ -135,4 +176,19 @@ function displayMasterSketch(){
     beginnerSectionSketch.style.display = "none";
     intermediateSectionSketch.style.display = "none";
     masterSectionSketch.style.display = "grid";
+}
+
+function displayMasterAdobe(){
+    beginnerButtonAdobe.classList.add("level");
+    beginnerButtonAdobe.classList.remove("active-level");
+
+    intermediateButtonAdobe.classList.add("level");
+    intermediateButtonAdobe.classList.remove("active-level");
+
+    masterButtonAdobe.classList.remove("level");
+    masterButtonAdobe.classList.add("active-level");
+
+    beginnerSectionAdobe.style.display = "none";
+    intermediateSectionAdobe.style.display = "none";
+    masterSectionAdobe.style.display = "grid";
 }
