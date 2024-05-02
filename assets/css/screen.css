@@ -159,7 +159,7 @@ button:hover{
     width: 15vw;
     height: 3vw;
     font-size: 1.5vw;
-    margin-left: 18%;
+    margin-left: 16%;
 }
 
 .card-content{
@@ -521,7 +521,7 @@ label{
     padding: 0.3vw;
 }
 
-#resultKey{
+.h2Application{
     margin-top: 4vw;
     color: #30323D;
     font-size: 2vw;
@@ -677,6 +677,10 @@ label{
     #result{
         font-size: 3vw;
         margin-top: 4vw;
+    }
+
+    .h2Application{
+        font-size: 3vw;
     }
 }
 
@@ -876,5 +880,9 @@ label{
     #result{
         font-size: 4.5vw;
         margin-top: 4vw;
+    }
+
+    .h2Application{
+        font-size: 4.5vw;
     }
 }
