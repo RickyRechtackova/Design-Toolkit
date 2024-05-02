@@ -56,6 +56,74 @@
             <div id="color-palette"></div>
         </section>
 
+        <section class="application-sections">
+            <h1>Colour Contrast Checker</h1>
+            <p>
+                Colour contrast checking is crucial for designers as it ensures readability and accessibility for 
+                all users, particularly those with visual impairments, enhancing the overall user experience.
+                <br>
+                Unsure of whether your colours have a suitable level of contrast? Try our checker below!
+            </p>
+
+            <div class="contrast-container">
+                <div id="item1">
+                    <label for="colour1" class="colour-label">Text Colour:</label>
+                    <input type="color" id="colour1">
+                </div>
+                <div id="item2">
+                    <label for="colour2" class="colour-label">Background Colour:</label>
+                    <input type="color" id="colour2">
+                </div>
+                <div id="item3">
+                    <button onclick="checkContrast()" id="check-contrast">Check Contrast</button>
+                </div>
+            </div>
+            <p id="result"></p>
+
+            <h2 id="resultKey">What your result means:</h2>
+
+            <div class="results-container">
+                <div class="result">
+                    <h3>AAA</h3>
+                    <p class="result-statement">Well done!</p>
+
+                    <p>
+                        This means you have achieved the highest level of accessibility according to the Web 
+                        Content Accessibility Guidelines (WCAG). Meeting this AAA standard indicates that the 
+                        colour contrast between text and its background is sufficient for users with the most 
+                        significant visual impairments, ensuring optimal readability and accessibility.
+                    </p>
+                </div>
+
+                <div class="result">
+                    <h3>AA</h3>
+                    <p class="result-statement">That's Okay!</p>
+
+                    <p>
+                        This means you have achieved a level of accessibility according to the Web 
+                        Content Accessibility Guidelines (WCAG). Meeting the AA standard indicates that the colour 
+                        contrast between text and its background is sufficient for most users, including those 
+                        with mild to moderate visual impairments, ensuring readability and accessibility for a 
+                        broader range of individuals.
+                    </p>
+                </div>
+
+                <div class="result" id="result3">
+                    <h3>Fail</h3>
+                    <p class="result-statement">Uh Oh!</p>
+
+                    <p>
+                        This means that the colour contrast between text and its background does not meet the 
+                        minimum accessibility standards outlined in the Web Content Accessibility Guidelines 
+                        (WCAG). This means that the text may be difficult to read for many users, particularly 
+                        those with visual impairments, potentially leading to a poor user experience and reduced 
+                        accessibility.<br>
+                        Give it another go!
+                    </p>
+                </div>
+            </div>
+        </section>
+
         <footer>
             Ⓒ 2024
         </footer>

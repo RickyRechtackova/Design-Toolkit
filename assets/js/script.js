@@ -338,3 +338,60 @@ function copyToClipboard(element) {
         console.error("Unable to copy color code " + colorCode);
     });
 }
+
+function checkContrast() {
+    var colour1 = document.getElementById("colour1").value;
+    var colour2 = document.getElementById("colour2").value;
+    
+    var contrastRatio = getContrastRatio(colour1, colour2);
+    
+    if (contrastRatio >= 4.5) {
+
+        document.getElementById("result").innerText = "Contrast ratio is AAA (pass)";
+
+    } else if (contrastRatio >= 3) {
+
+        document.getElementById("result").innerText = "Contrast ratio is AA (pass)";
+
+    } else {
+
+        document.getElementById("result").innerText = "Contrast ratio is fail";
+    }
+}
+
+function getContrastRatio(colour1, colour2) {
+    // Convert color strings to RGB values
+    var rgb1 = hexToRgb(colour1);
+    var rgb2 = hexToRgb(colour2);
+
+    // Calculate the contrast ratio
+    var luminance1 = getLuminance(rgb1);
+    var luminance2 = getLuminance(rgb2);
+
+    var contrastRatio = (Math.max(luminance1, luminance2) + 0.05) / (Math.min(luminance1, luminance2) + 0.05);
+
+    return contrastRatio.toFixed(2);
+}
+
+function hexToRgb(hex) {
+    var shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i;
+    hex = hex.replace(shorthandRegex, function(m, r, g, b) {
+        return r + r + g + g + b + b;
+    });
+
+    var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+    return result ? {
+        r: parseInt(result[1], 16),
+        g: parseInt(result[2], 16),
+        b: parseInt(result[3], 16)
+    } : null;
+}
+
+function getLuminance(rgb) {
+    var a = [rgb.r, rgb.g, rgb.b].map(function(v) {
+        v /= 255;
+        return v <= 0.03928 ? v / 12.92 : Math.pow((v + 0.055) / 1.055, 2.4);
+    });
+
+    return a[0] * 0.2126 + a[1] * 0.7152 + a[2] * 0.0722;
+}
