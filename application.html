@@ -57,10 +57,6 @@
         </section>
 
         <section class="application-sections">
-            <h1>Colour Picker/Contrast Checker</h1>
-        </section>
-
-        <section class="application-sections">
             <h1>Font Picker</h1>
             <p>Select Example Font:</p>
             <div id="font-container">
@@ -75,8 +71,77 @@
                 </div>
                 <p id="example-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br><br>
                     Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
-            </div>
         </section>
+        
+        <section class="application-sections">
+            <h1>Colour Contrast Checker</h1>
+            <p>
+                Colour contrast checking is crucial for designers as it ensures readability and accessibility for 
+                all users, particularly those with visual impairments, enhancing the overall user experience.
+                <br>
+                Unsure of whether your colours have a suitable level of contrast? Try our checker below!
+            </p>
+
+            <div class="contrast-container">
+                <div id="item1">
+                    <label for="colour1" class="colour-label">Text Colour:</label>
+                    <input type="color" id="colour1">
+                </div>
+                <div id="item2">
+                    <label for="colour2" class="colour-label">Background Colour:</label>
+                    <input type="color" id="colour2">
+                </div>
+                <div id="item3">
+                    <button onclick="checkContrast()" id="check-contrast">Check Contrast</button>
+                </div>
+            </div>
+            <p id="result"></p>
+
+            <h2 id="resultKey">What your result means:</h2>
+
+            <div class="results-container">
+                <div class="result">
+                    <h3>AAA</h3>
+                    <p class="result-statement">Well done!</p>
+
+                    <p>
+                        This means you have achieved the highest level of accessibility according to the Web 
+                        Content Accessibility Guidelines (WCAG). Meeting this AAA standard indicates that the 
+                        colour contrast between text and its background is sufficient for users with the most 
+                        significant visual impairments, ensuring optimal readability and accessibility.
+                    </p>
+                </div>
+
+                <div class="result">
+                    <h3>AA</h3>
+                    <p class="result-statement">That's Okay!</p>
+
+                    <p>
+                        This means you have achieved a level of accessibility according to the Web 
+                        Content Accessibility Guidelines (WCAG). Meeting the AA standard indicates that the colour 
+                        contrast between text and its background is sufficient for most users, including those 
+                        with mild to moderate visual impairments, ensuring readability and accessibility for a 
+                        broader range of individuals.
+                    </p>
+                </div>
+
+                <div class="result" id="result3">
+                    <h3>Fail</h3>
+                    <p class="result-statement">Uh Oh!</p>
+
+                    <p>
+                        This means that the colour contrast between text and its background does not meet the 
+                        minimum accessibility standards outlined in the Web Content Accessibility Guidelines 
+                        (WCAG). This means that the text may be difficult to read for many users, particularly 
+                        those with visual impairments, potentially leading to a poor user experience and reduced 
+                        accessibility.<br>
+                        Give it another go!
+                    </p>
+                </div>
+        </section>
+
+            </div>
+
 
         <footer>
             Ⓒ 2024
