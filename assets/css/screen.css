@@ -462,6 +462,7 @@ label{
     height: 3vw;
     font-size: 1.5vw;
 }
+
 #font-container{
     border: solid 3px #B84A62;
     padding: 2%;
@@ -678,6 +679,15 @@ label{
         font-size: 3vw;
         margin-top: 4vw;
     }
+
+    #font-picker{
+        align-items: center;
+    }
+
+    .font-option {
+        width: 37vw;
+        margin: 1%;
+    }
 }
 
 
@@ -876,5 +886,14 @@ label{
     #result{
         font-size: 4.5vw;
         margin-top: 4vw;
+    }
+
+    #font-picker{
+        align-items: center;
+    }
+
+    .font-option {
+        width: 35vw;
+        margin: 1%;
     }
 }
