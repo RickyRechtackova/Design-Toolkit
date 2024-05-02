@@ -410,14 +410,14 @@ strong{
     /* background-color: #333; */
 }
 
-#color-palette {
+#colour-palette {
     display: flex;
     justify-content: center;
     margin-top: 20px;
     box-sizing: border-box;
     width: 100%;
 }
-.colorBox {
+.colourBox {
     width: 20vw;
     height: 20vh;
     margin: 0.5%;
@@ -425,7 +425,7 @@ strong{
     cursor: pointer;
 }
 
-#colorNum{
+#colourNum{
     height: 3.7vh;
     width: 11vw;
     border-radius: 2vw;
@@ -441,7 +441,7 @@ label{
     font-weight: bold;
 }
 
-#color-harmony{
+#colour-harmony{
     height: 7.9vh;
     width: 15vw;
     border-radius: 2vw;
@@ -622,14 +622,14 @@ label{
         font-size: 2vw;
     }
 
-    #colorNum{
+    #colourNum{
         height: 2vh;
         width: 15vw;
         font-size: 2vw;
         padding: 2%;
     }
     
-    #color-harmony{
+    #colour-harmony{
         height: 6vh;
         width: 30vw;
         font-size: 2vw;
@@ -817,7 +817,7 @@ label{
         height: 25vh;
     }
 
-    #colorNum{
+    #colourNum{
         height: 3vh;
         width: 15vw;
         font-size: 4vw;
@@ -828,7 +828,7 @@ label{
         font-size: 4vw;
     }
     
-    #color-harmony{
+    #colour-harmony{
         height: 6vh;
         width: 35vw;
         font-size: 3.5vw;

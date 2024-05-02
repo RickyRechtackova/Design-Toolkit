@@ -196,58 +196,58 @@ function displayMasterAdobe(){
 // js for application page
 
 function generatePalette() {
-    var colorNum = document.getElementById("colorNum").value;
-    var colorHarmony = document.getElementById("color-harmony").value;
-    var colorPalette = document.getElementById("color-palette");
-    colorPalette.innerHTML = '';
+    var colourNum = document.getElementById("colourNum").value;
+    var colourHarmony = document.getElementById("colour-harmony").value;
+    var colourPalette = document.getElementById("colour-palette");
+    colourPalette.innerHTML = '';
 
-    var baseColor = generateRandomColor();
+    var baseColour = generateRandomColor();
 
-    switch(colorHarmony) {
+    switch(colourHarmony) {
         case 'complementary':
-            generateComplementaryPalette(colorPalette, baseColor, colorNum);
+            generateComplementaryPalette(colourPalette, baseColour, colourNum);
             break;
         case 'analogous':
-            generateAnalogousPalette(colorPalette, baseColor, colorNum);
+            generateAnalogousPalette(colourPalette, baseColour, colourNum);
             break;
         case 'triadic':
-            generateTriadicPalette(colorPalette, baseColor, colorNum);
+            generateTriadicPalette(colourPalette, baseColour, colourNum);
             break;
         default:
-            generateComplementaryPalette(colorPalette, baseColor, colorNum);
+            generateComplementaryPalette(colourPalette, baseColour, colourNum);
             break;
     }
 }
 
-function generateComplementaryPalette(colorPalette, baseColor, colorNum) {
-    var baseHue = hexToHue(baseColor);
-    for (var i = 0; i < colorNum; i++) {
-        var hue = (baseHue + 180 + (i * 360 / colorNum)) % 360;
-        var color = hueToHex(hue);
-        addColorBox(colorPalette, color);
+function generateComplementaryPalette(colourPalette, baseColour, colourNum) {
+    var baseHue = hexToHue(baseColour);
+    for (var i = 0; i < colourNum; i++) {
+        var hue = (baseHue + 180 + (i * 360 / colourNum)) % 360;
+        var colour = hueToHex(hue);
+        addColorBox(colourPalette, colour);
     }
 }
 
-function generateAnalogousPalette(colorPalette, baseColor, colorNum) {
-    var baseHue = hexToHue(baseColor);
-    for (var i = 0; i < colorNum; i++) {
+function generateAnalogousPalette(colourPalette, baseColour, colourNum) {
+    var baseHue = hexToHue(baseColour);
+    for (var i = 0; i < colourNum; i++) {
         var hue = (baseHue + (i * 30)) % 360;
-        var color = hueToHex(hue);
-        addColorBox(colorPalette, color);
+        var colour = hueToHex(hue);
+        addColorBox(colourPalette, colour);
     }
 }
 
-function generateTriadicPalette(colorPalette, baseColor, colorNum) {
-    var baseHue = hexToHue(baseColor);
-    for (var i = 0; i < colorNum; i++) {
+function generateTriadicPalette(colourPalette, baseColour, colourNum) {
+    var baseHue = hexToHue(baseColour);
+    for (var i = 0; i < colourNum; i++) {
         var hue = (baseHue + (i * 120)) % 360;
-        var color = hueToHex(hue);
-        addColorBox(colorPalette, color);
+        var colour = hueToHex(hue);
+        addColorBox(colourPalette, colour);
     }
 }
 
-function hexToHue(hexColor) {
-    var hex = hexColor.substring(1); // remove #
+function hexToHue(hexColour) {
+    var hex = hexColour.substring(1); // remove #
     var bigint = parseInt(hex, 16);
     var r = (bigint >> 16) & 255;
     var g = (bigint >> 8) & 255;
@@ -279,23 +279,23 @@ function hueToHex(hue) {
     var h = hue / 60;
     var c = 255;
     var x = (1 - Math.abs(h % 2 - 1)) * c;
-    var color;
+    var colour;
 
     if (h >= 0 && h < 1) {
-        color = rgbToHex(c, x, 0);
+        colour = rgbToHex(c, x, 0);
     } else if (h >= 1 && h < 2) {
-        color = rgbToHex(x, c, 0);
+        colour = rgbToHex(x, c, 0);
     } else if (h >= 2 && h < 3) {
-        color = rgbToHex(0, c, x);
+        colour = rgbToHex(0, c, x);
     } else if (h >= 3 && h < 4) {
-        color = rgbToHex(0, x, c);
+        colour = rgbToHex(0, x, c);
     } else if (h >= 4 && h < 5) {
-        color = rgbToHex(x, 0, c);
+        colour = rgbToHex(x, 0, c);
     } else {
-        color = rgbToHex(c, 0, x);
+        colour = rgbToHex(c, 0, x);
     }
 
-    return "#" + color;
+    return "#" + colour;
 }
 
 function rgbToHex(r, g, b) {
@@ -312,30 +312,30 @@ function rgbToHex(r, g, b) {
 
 function generateRandomColor() {
     var letters = '0123456789ABCDEF';
-    var color = '#';
+    var colour = '#';
     for (var i = 0; i < 6; i++) {
-        color += letters[Math.floor(Math.random() * 16)];
+        colour += letters[Math.floor(Math.random() * 16)];
     }
-    return color;
+    return colour;
 }
 
-function addColorBox(colorPalette, color) {
-    var colorBox = document.createElement("div");
-    colorBox.className = "colorBox";
-    colorBox.style.backgroundColor = color;
-    colorBox.setAttribute("title", color);
-    colorBox.addEventListener("click", function() {
+function addColorBox(colourPalette, colour) {
+    var colourBox = document.createElement("div");
+    colourBox.className = "colourBox";
+    colourBox.style.backgroundColor = colour;
+    colourBox.setAttribute("title", colour);
+    colourBox.addEventListener("click", function() {
         copyToClipboard(this);
     });
-    colorPalette.appendChild(colorBox);
+    colourPalette.appendChild(colourBox);
 }
 
 function copyToClipboard(element) {
-    var colorCode = element.getAttribute("title");
-    navigator.clipboard.writeText(colorCode).then(function() {
-        alert("Color code " + colorCode + " copied to clipboard!");
+    var colourCode = element.getAttribute("title");
+    navigator.clipboard.writeText(colourCode).then(function() {
+        alert("Colour code " + colourCode + " copied to clipboard!");
     }, function() {
-        console.error("Unable to copy color code " + colorCode);
+        console.error("Unable to copy colour code " + colourCode);
     });
 }
 
