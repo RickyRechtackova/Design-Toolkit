@@ -555,19 +555,24 @@ label{
     }
 
     .card-title{
-        font-size: 4vw;
+        font-size: 4.5vw;
     }
 
     .long-card-title{
         font-size: 4.5vw;
     }
 
+    .card-front, .card-back{
+        padding: 40px 10px 40px 10px;
+        box-sizing: border-box;
+    }
+
     .card-buttons{
         width: 35vw;
         height: 7vw;
         font-size: 3vw;
-        margin-left: 9vw;
-        margin-top: 1vw;
+        margin-left: 12vw;
+        margin-top: 2vw;
         border-radius: 4vw;
     }
 
