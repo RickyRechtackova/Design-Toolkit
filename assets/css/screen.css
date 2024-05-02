@@ -36,23 +36,26 @@ body{
 .nav-links{
     width: 100%; 
     height: auto;
-    overflow: hidden;
-    a {
-        font-size: 1.7vw;
-        text-decoration: none;
-        color: #ffffff;
-        padding-left: 1em;
-        padding-right: 1em;
-        padding-top: 3vw;
-        padding-bottom:3vw;
-        display: inline-block;
-    }
-    a:hover{
-        background-color: #B84A62;
-    }
-    a.active{
-        background-color: #B84A62;
-    }
+    overflow: hidden; 
+}
+
+a{
+    font-size: 1.7vw;
+    text-decoration: none;
+    color: #ffffff;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 3vw;
+    padding-bottom:3vw;
+    display: inline-block;
+}
+
+a:hover{
+    background-color: #B84A62;
+}
+
+a.active{
+    background-color: #B84A62;
 }
 
 #logo{
@@ -196,16 +199,16 @@ button:hover{
     background-color: #30323D;
     color: #fff;
     transform: rotateY(180deg);
+}
 
-    .card-title {
-        margin: 0;
-        text-align: center;
-        color: #ffffff;
-    }
+.card-title {
+    margin: 0;
+    text-align: center;
+    color: #ffffff;
+}
 
-    .long-card-title{
-        color: #ffffff;
-    }
+.long-card-title{
+    color: #ffffff;
 }
 
 .image-placeholder {
@@ -258,6 +261,7 @@ strong{
     background-color: #30323D;
     border-radius: 2vw 2vw 0vw 0vw;
     width: 100%;
+    cursor: pointer;
 }
 
 .active-level{
@@ -389,7 +393,66 @@ strong{
 }
 
 /* application CSS */
+.application-sections{
+    padding: 2%;
+    border-radius: 2vw;
+    background-color: #ffe9ed;
+    margin: 1%;
+}
 
+#palette-container{
+    text-align: center;
+}
+
+#color-palette {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    box-sizing: border-box;
+    width: 100%;
+}
+.colorBox {
+    width: 20vw;
+    height: 20vh;
+    margin: 0.5%;
+    border-radius: 2vw;
+    cursor: pointer;
+}
+
+#colorNum{
+    height: 3.7vh;
+    width: 11vw;
+    border-radius: 2vw;
+    border: solid 3px #B84A62;
+    font-size: 1.5vw;
+    padding: 1%;
+}
+
+label{
+    font-size: 1.5vw;
+    
+}
+
+#color-harmony{
+    height: 7.9vh;
+    width: 15vw;
+    border-radius: 2vw;
+    border: solid 3px #B84A62;
+    font-size: 1.5vw;
+    padding: 1%;
+}
+
+#generate-palette{
+    background-color: #B84A62;
+    border: 2px solid #97374c;
+    color: white;
+    border-radius: 2vw;
+    font-family: "Krub", sans-serif;
+    cursor: pointer;
+    width: 20vw;
+    height: 3vw;
+    font-size: 1.5vw;
+}
 
 /* tablet CSS */
 @media screen and (min-width: 600px) and (max-width: 1000px){
@@ -423,10 +486,8 @@ strong{
         margin-top: 1vw;
     }
 
-    .nav-links{
-        a{
-            font-size: 2vw;
-        }
+    a{
+        font-size: 2vw;
     }
 
     p{

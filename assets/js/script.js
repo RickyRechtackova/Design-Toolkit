@@ -192,3 +192,149 @@ function displayMasterAdobe(){
     intermediateSectionAdobe.style.display = "none";
     masterSectionAdobe.style.display = "grid";
 }
+
+// js for application page
+
+function generatePalette() {
+    var colorNum = document.getElementById("colorNum").value;
+    var colorHarmony = document.getElementById("color-harmony").value;
+    var colorPalette = document.getElementById("color-palette");
+    colorPalette.innerHTML = '';
+
+    var baseColor = generateRandomColor();
+
+    switch(colorHarmony) {
+        case 'complementary':
+            generateComplementaryPalette(colorPalette, baseColor, colorNum);
+            break;
+        case 'analogous':
+            generateAnalogousPalette(colorPalette, baseColor, colorNum);
+            break;
+        case 'triadic':
+            generateTriadicPalette(colorPalette, baseColor, colorNum);
+            break;
+        default:
+            generateComplementaryPalette(colorPalette, baseColor, colorNum);
+            break;
+    }
+}
+
+function generateComplementaryPalette(colorPalette, baseColor, colorNum) {
+    var baseHue = hexToHue(baseColor);
+    for (var i = 0; i < colorNum; i++) {
+        var hue = (baseHue + 180 + (i * 360 / colorNum)) % 360;
+        var color = hueToHex(hue);
+        addColorBox(colorPalette, color);
+    }
+}
+
+function generateAnalogousPalette(colorPalette, baseColor, colorNum) {
+    var baseHue = hexToHue(baseColor);
+    for (var i = 0; i < colorNum; i++) {
+        var hue = (baseHue + (i * 30)) % 360;
+        var color = hueToHex(hue);
+        addColorBox(colorPalette, color);
+    }
+}
+
+function generateTriadicPalette(colorPalette, baseColor, colorNum) {
+    var baseHue = hexToHue(baseColor);
+    for (var i = 0; i < colorNum; i++) {
+        var hue = (baseHue + (i * 120)) % 360;
+        var color = hueToHex(hue);
+        addColorBox(colorPalette, color);
+    }
+}
+
+function hexToHue(hexColor) {
+    var hex = hexColor.substring(1); // remove #
+    var bigint = parseInt(hex, 16);
+    var r = (bigint >> 16) & 255;
+    var g = (bigint >> 8) & 255;
+    var b = bigint & 255;
+    var max = Math.max(r, g, b);
+    var min = Math.min(r, g, b);
+    var delta = max - min;
+    var hue = 0;
+
+    if (delta === 0) {
+        return hue;
+    }
+
+    if (max === r) {
+        hue = (g - b) / delta;
+    } else if (max === g) {
+        hue = 2 + (b - r) / delta;
+    } else {
+        hue = 4 + (r - g) / delta;
+    }
+
+    hue *= 60;
+    if (hue < 0) hue += 360;
+
+    return hue;
+}
+
+function hueToHex(hue) {
+    var h = hue / 60;
+    var c = 255;
+    var x = (1 - Math.abs(h % 2 - 1)) * c;
+    var color;
+
+    if (h >= 0 && h < 1) {
+        color = rgbToHex(c, x, 0);
+    } else if (h >= 1 && h < 2) {
+        color = rgbToHex(x, c, 0);
+    } else if (h >= 2 && h < 3) {
+        color = rgbToHex(0, c, x);
+    } else if (h >= 3 && h < 4) {
+        color = rgbToHex(0, x, c);
+    } else if (h >= 4 && h < 5) {
+        color = rgbToHex(x, 0, c);
+    } else {
+        color = rgbToHex(c, 0, x);
+    }
+
+    return "#" + color;
+}
+
+function rgbToHex(r, g, b) {
+    var red = Math.round(r).toString(16);
+    var green = Math.round(g).toString(16);
+    var blue = Math.round(b).toString(16);
+
+    if (red.length == 1) red = "0" + red;
+    if (green.length == 1) green = "0" + green;
+    if (blue.length == 1) blue = "0" + blue;
+
+    return red + green + blue;
+}
+
+function generateRandomColor() {
+    var letters = '0123456789ABCDEF';
+    var color = '#';
+    for (var i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+}
+
+function addColorBox(colorPalette, color) {
+    var colorBox = document.createElement("div");
+    colorBox.className = "colorBox";
+    colorBox.style.backgroundColor = color;
+    colorBox.setAttribute("title", color);
+    colorBox.addEventListener("click", function() {
+        copyToClipboard(this);
+    });
+    colorPalette.appendChild(colorBox);
+}
+
+function copyToClipboard(element) {
+    var colorCode = element.getAttribute("title");
+    navigator.clipboard.writeText(colorCode).then(function() {
+        alert("Color code " + colorCode + " copied to clipboard!");
+    }, function() {
+        console.error("Unable to copy color code " + colorCode);
+    });
+}
