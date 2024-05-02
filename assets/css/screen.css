@@ -458,6 +458,33 @@ label{
     font-size: 1.5vw;
 }
 
+#font-container{
+    border: solid 3px #B84A62;
+    padding: 2%;
+    border-radius: 2vw;
+}
+
+#font-picker{
+    width: 100%;
+    /* background-color: #30323D; */
+    display: flex;
+    justify-content: center;
+}
+
+#fontList {
+    list-style: none;
+}
+
+.font-option {
+    width: 10vw;
+    text-align: center;
+    display: inline-block;
+    padding: 10px;
+    cursor: pointer;
+    border: 3px solid #B84A62;
+    border-radius: 2vw;
+}
+
 /* tablet CSS */
 @media screen and (min-width: 600px) and (max-width: 1000px){
     .nav-container{
@@ -546,8 +573,9 @@ label{
     }
 }
 
+
 /* mobile CSS */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 600px){
     .nav-container{
         grid-template-columns: 0.5fr 0.5fr 3fr;
     }

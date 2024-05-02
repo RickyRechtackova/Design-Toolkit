@@ -338,3 +338,8 @@ function copyToClipboard(element) {
         console.error("Unable to copy color code " + colorCode);
     });
 }
+
+function setSelectedFont(fontFamily, index) {
+    let text = document.getElementById("example-text")
+    text.style.fontFamily = fontFamily;
+}
