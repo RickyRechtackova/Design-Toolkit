@@ -475,7 +475,7 @@ label{
         width: 20vw;
         height: 4vw;
         font-size: 2vw;
-        margin-left: 6vw;
+
         margin-top: 1vw;
     }
 
@@ -562,7 +562,7 @@ label{
         font-size: 4.5vw;
     }
 
-    .card-front, .card-back{
+    .card-front{
         padding: 40px 10px 40px 10px;
         box-sizing: border-box;
     }
@@ -571,14 +571,12 @@ label{
         width: 35vw;
         height: 7vw;
         font-size: 3vw;
-        margin-left: 12vw;
-        margin-top: 2vw;
+        margin-top: 1vw;
         border-radius: 4vw;
     }
 
     .card-content{
         font-size: 3.5vw;
-        margin-top: 2vh;
     }
 
     p{
