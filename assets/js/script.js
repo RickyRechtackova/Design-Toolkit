@@ -12,11 +12,11 @@ let matched = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
 if(matched){
 	console.log('Currently in dark mode'); 
-    document.getElementById("browserIcon").href="assets/img/icon.ico"
+    document.getElementById("browserIcon").href="assets/img/icon.ico";
 }
 else{
 	console.log('Currently not in dark mode');
-    document.getElementById("browserIcon").href="assets/img/iconBlack.ico"
+    document.getElementById("browserIcon").href="assets/img/iconBlack.ico";
 }
 
 // js for tools page
@@ -70,7 +70,7 @@ function displayBeginnerFigma(){
     beginnerSectionFigma.style.display = "grid";
     intermediateSectionFigma.style.display = "none";
     masterSectionFigma.style.display = "none";
-    console.log(beginnerSectionFigma.style.display)
+    console.log(beginnerSectionFigma.style.display);
 }
 
 function displayBeginnerSketch(){
@@ -340,7 +340,7 @@ function copyToClipboard(element) {
 }
 
 function setSelectedFont(fontFamily, index) {
-    let text = document.getElementById("example-text")
+    let text = document.getElementById("example-text");
     text.style.fontFamily = fontFamily;
 }
 
