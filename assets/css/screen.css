@@ -452,10 +452,6 @@ label{
 }
 
 #generate-palette{
-    background-color: #B84A62;
-    border: 2px solid #97374c;
-    color: white;
-    border-radius: 2vw;
     font-family: "Krub", sans-serif;
     cursor: pointer;
     width: 20vw;
@@ -488,6 +484,10 @@ label{
     cursor: pointer;
     border: 3px solid #B84A62;
     border-radius: 2vw;
+}
+
+.font-option:hover{
+    background-color: #b85469;
 }
 
 #check-contrast{
